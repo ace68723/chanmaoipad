@@ -4,10 +4,10 @@ module.exports = {
 
 	app_files: {
 		//source, but NO specs
-		js: ['src/app/**/*.js', '!src/app/**/*.spec.js'],
+		js: ['src/app/**/*.js', 'src/common/**.js','!src/app/**/*.spec.js','!src/common/**/*.spec.js'],
 
 		//partial templates
-		atpl: ['src/app/**/*.tpl.html'],
+		atpl: ['src/app/*.tpl.html','src/app/**/*.tpl.html'],
 		
 
 		//the index.html
