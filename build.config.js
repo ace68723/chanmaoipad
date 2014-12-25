@@ -7,7 +7,7 @@ module.exports = {
 		js: ['src/app/**/*.js', 'src/common/**.js','!src/app/**/*.spec.js','!src/common/**/*.spec.js'],
 
 		//partial templates
-		atpl: ['src/app/*.tpl.html','src/app/**/*.tpl.html'],
+		atpl: ['src/app/**/*.tpl.html'],
 		
 
 		//the index.html

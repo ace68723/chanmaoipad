@@ -1,23 +1,22 @@
-angular.module('templates-app', ['tab-dash.tpl.html', 'tabs.tpl.html', 'login/login.tpl.html']);
+angular.module('templates-app', ['login/login.tpl.html', 'tabs/tabs.tpl.html']);
 
-angular.module("tab-dash.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("tab-dash.tpl.html",
+angular.module("login/login.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("login/login.tpl.html",
     "<ion-view view-title=\"Dashboard\">\n" +
     "  <ion-content class=\"padding\">\n" +
     "    <div class=\"list card\">\n" +
-    "      <div class=\"item item-divider\">Recent Updates</div>\n" +
+    "      <div class=\"item item-divider\">{{text}}</div>\n" +
     "      <div class=\"item item-body\">\n" +
     "        <div>\n" +
-    "          {{connectionType}}\n" +
+    "          {{text}}\n" +
     "      </div>\n" +
     "    </div>\n" +
     "  </ion-content>\n" +
-    "</ion-view>\n" +
-    "");
+    "</ion-view>");
 }]);
 
-angular.module("tabs.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("tabs.tpl.html",
+angular.module("tabs/tabs.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("tabs/tabs.tpl.html",
     "<!--\n" +
     "Create tabs with an icon and label, using the tabs-positive style.\n" +
     "Each tab's child <ion-nav-view> directive will have its own\n" +
@@ -51,19 +50,4 @@ angular.module("tabs.tpl.html", []).run(["$templateCache", function($templateCac
     "\n" +
     "</ion-tabs>\n" +
     "");
-}]);
-
-angular.module("login/login.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("login/login.tpl.html",
-    "<ion-view view-title=\"Dashboard\">\n" +
-    "  <ion-content class=\"padding\">\n" +
-    "    <div class=\"list card\">\n" +
-    "      <div class=\"item item-divider\">Recent Updates</div>\n" +
-    "      <div class=\"item item-body\">\n" +
-    "        <div>\n" +
-    "          {{connectionType}}\n" +
-    "      </div>\n" +
-    "    </div>\n" +
-    "  </ion-content>\n" +
-    "</ion-view>");
 }]);

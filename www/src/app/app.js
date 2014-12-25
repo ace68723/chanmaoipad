@@ -1,10 +1,9 @@
 angular.module('example-app',[
 	'ionic', 
 	'ngCordova',
-	'example-app.login',
-	'ui.router',
 	'templates-app',
 	'example-app.modules',
+	'LoginCtrl',
 	'LoginService'
 
 	])
@@ -17,14 +16,14 @@ angular.module('example-app',[
 	    .state('tab', {
 	    url: "/tab",
 	    abstract: true,
-	    templateUrl: "tabs.tpl.html"
+	    templateUrl: "tabs/tabs.tpl.html"
 	  })
 	    .state('tab.dash', {
 	    url: '/dash',
 	    views: {
 	      'tab-dash': {
 	        templateUrl: 'login/login.tpl.html',
-	        //controller: 'NetworkCtrl'
+	        controller: 'loginCtrl'
 	      }
 	    }
 	  })

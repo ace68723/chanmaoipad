@@ -104,7 +104,7 @@ module.exports = function(grunt){
 
 			atpl:{
 				files: [' <%= app_files.atpl %>'],
-				tasks: [ 'html2js'],
+				tasks: [ 'html2js']
 			},
 
 			// vendor:{
